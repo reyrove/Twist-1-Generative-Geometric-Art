@@ -1,6 +1,6 @@
 # Twist 1 — Generative Geometric Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://your-username.github.io/twist1)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://github.com/reyrove/Twist-1-Generative-Geometric-Art)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > **Generative art meets apparel design.** Each refresh creates a unique composition of twisting circles with random colors, backgrounds, and seed-based patterns.
@@ -9,7 +9,7 @@
 
 ## 🎨 Live Demo
 
-**[View it live →](https://your-username.github.io/twist1)**
+**[View it live →](https://github.com/reyrove/Twist-1-Generative-Geometric-Art)**
 
 ## ✨ Features
 
@@ -29,7 +29,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/twist1.git
+git clone https://github.com/reyrove/Twist-1-Generative-Geometric-Art.git
 
 # Navigate to the directory
 cd twist1
@@ -44,7 +44,7 @@ open index.html
 1. Push to GitHub
 2. Go to Settings → Pages
 3. Select branch `main` and root folder
-4. Your site will be live at `https://your-username.github.io/twist1`
+4. Your site will be live at `https://github.com/reyrove/Twist-1-Generative-Geometric-Art`
 
 ## 🧠 How It Works
 
