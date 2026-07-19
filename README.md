@@ -1,6 +1,6 @@
 # Twist 1 — Generative Geometric Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://github.com/reyrove/Twist-1-Generative-Geometric-Art)
+[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Twist-1-Generative-Geometric-Art)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > **Generative art meets apparel design.** Each refresh creates a unique composition of twisting circles with random colors, backgrounds, and seed-based patterns.
@@ -9,7 +9,17 @@
 
 ## 🎨 Live Demo
 
-**[View it live →](https://github.com/reyrove/Twist-1-Generative-Geometric-Art)**
+<div align="center">
+  <a href="https://reyrove.github.io/Twist-1-Generative-Geometric-Art" target="_blank">
+    <img src="demo-screenshot.jpg" alt="Twist 1 Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
+  </a>
+  <br><br>
+  <a href="https://reyrove.github.io/Twist-1-Generative-Geometric-Art" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
+  </a>
+  <br>
+  <em>Click the image or button to experience the generative art</em>
+</div>
 
 ## ✨ Features
 
@@ -32,7 +42,7 @@
 git clone https://github.com/reyrove/Twist-1-Generative-Geometric-Art.git
 
 # Navigate to the directory
-cd twist1
+cd Twist-1-Generative-Geometric-Art
 
 # Open in browser
 open index.html
@@ -44,7 +54,7 @@ open index.html
 1. Push to GitHub
 2. Go to Settings → Pages
 3. Select branch `main` and root folder
-4. Your site will be live at `https://github.com/reyrove/Twist-1-Generative-Geometric-Art`
+4. Your site will be live at `https://reyrove.github.io/Twist-1-Generative-Geometric-Art`
 
 ## 🧠 How It Works
 
@@ -58,10 +68,11 @@ The artwork is generated using a deterministic random number generator, seeded b
 ## 📁 File Structure
 
 ```
-twist1/
+Twist-1-Generative-Geometric-Art/
 ├── index.html          # Main application (all-in-one)
 ├── Twist-1.jpg         # T-shirt mockup image
 ├── fav.svg             # Favicon
+├── demo-screenshot.png # Website demo screenshot
 ├── README.md           # This file
 └── LICENSE             # MIT License
 ```
@@ -73,11 +84,13 @@ twist1/
 - **CSS Grid & Flexbox** — Responsive layout
 - **GitHub Pages** — Hosting
 
-## 📸 Gallery
+## 🎯 Interactive Controls
 
-| Desktop | Mobile | Apparel |
-|---------|--------|---------|
-| Desktop view | Mobile responsive | T-shirt mockup |
+| Action | Keyboard | Button |
+|--------|----------|--------|
+| Regenerate | `R` | Click "regenerate" |
+| Save Image | `S` | Click "regenerate" |
+| Toggle Apparel | `T` | Click "apparel" |
 
 ## 🔧 Customization
 
@@ -88,6 +101,22 @@ You can tweak the generation parameters in `index.html`:
 - **Background colors**: Edit `backgroundColours` array (line ~90)
 - **Foreground colors**: Edit `foregroundColours` array (line ~91)
 
+## 📱 Responsive Design
+
+The application automatically adapts to:
+- Desktop screens
+- Tablets
+- Mobile phones
+- Landscape orientation
+- Various aspect ratios
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Fork the repository
+- Create a feature branch
+- Submit a pull request
+
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) file for details.
@@ -96,6 +125,7 @@ MIT License — see [LICENSE](LICENSE) file for details.
 
 - Designed as generative art for apparel
 - Inspired by parametric design and computational creativity
+- Special thanks to the generative art community
 
 ---
 
