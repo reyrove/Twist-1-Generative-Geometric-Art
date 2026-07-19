@@ -5,8 +5,6 @@
 
 > **Generative art meets apparel design.** Each refresh creates a unique composition of twisting circles with random colors, backgrounds, and seed-based patterns.
 
-![Twist 1](Twist-1.jpg)
-
 ## 🎨 Live Demo
 
 <div align="center">
@@ -21,7 +19,7 @@
   <em>Click the image or button to experience the generative art</em>
 </div>
 
-## ✨ Features
+## 🎯 Features
 
 - **Infinite Variations** — 100–500 circles, π–5π twist range, 12 background colors, random RGB strokes
 - **Seed-Based** — Every composition is unique and reproducible via its seed
@@ -32,6 +30,14 @@
   - `R` — Regenerate
   - `S` — Save image
   - `T` — Toggle apparel view
+
+## 👕 Apparel Preview
+
+<div align="center">
+  <img src="Twist-1.jpg" alt="Twist 1 on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
+  <br>
+  <em>Twist 1 artwork printed on a T-shirt</em>
+</div>
 
 ## 🚀 Quick Start
 
@@ -72,7 +78,7 @@ Twist-1-Generative-Geometric-Art/
 ├── index.html          # Main application (all-in-one)
 ├── Twist-1.jpg         # T-shirt mockup image
 ├── fav.svg             # Favicon
-├── demo-screenshot.png # Website demo screenshot
+├── demo-screenshot.jpg # Website demo screenshot
 ├── README.md           # This file
 └── LICENSE             # MIT License
 ```
