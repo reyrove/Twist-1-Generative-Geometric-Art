@@ -1,138 +1,183 @@
-# Twist 1 — Generative Geometric Art
+# Twist 1 — Generative Art
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Twist-1-Generative-Geometric-Art)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-> **Generative art meets apparel design.** Each refresh creates a unique composition of twisting circles with random colors, backgrounds, and seed-based patterns.
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://reyrove.github.io/Twist-1-Generative-Geometric-Art" target="_blank">
-    <img src="demo-screenshot.jpg" alt="Twist 1 Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
-  </a>
-  <br><br>
-  <a href="https://reyrove.github.io/Twist-1-Generative-Geometric-Art" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
-  </a>
-  <br>
-  <em>Click the image or button to experience the generative art</em>
-</div>
-
-## 🎯 Features
-
-- **Infinite Variations** — 100–500 circles, π–5π twist range, 12 background colors, random RGB strokes
-- **Seed-Based** — Every composition is unique and reproducible via its seed
-- **Save & Share** — Download as PNG with seed in filename
-- **Apparel Mode** — Preview artwork on a T-shirt mockup
-- **Responsive** — Works on desktop, tablet, and mobile
-- **Keyboard Shortcuts**:
-  - `R` — Regenerate
-  - `S` — Save image
-  - `T` — Toggle apparel view
-
-## 👕 Apparel Preview
-
-<div align="center">
-  <img src="Twist-1.jpg" alt="Twist 1 on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br>
-  <em>Twist 1 artwork printed on a T-shirt</em>
-</div>
-
-## 🚀 Quick Start
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/reyrove/Twist-1-Generative-Geometric-Art.git
-
-# Navigate to the directory
-cd Twist-1-Generative-Geometric-Art
-
-# Open in browser
-open index.html
-# or use a live server
-```
-
-### Deploy to GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select branch `main` and root folder
-4. Your site will be live at `https://reyrove.github.io/Twist-1-Generative-Geometric-Art`
-
-## 🧠 How It Works
-
-The artwork is generated using a deterministic random number generator, seeded by timestamp + random noise. Every refresh:
-
-1. Chooses a background from 12 predefined colors
-2. Generates 100–500 circles (increments of 10)
-3. Each circle gets a random position, radius, stroke width, and RGB color
-4. The "twist" parameter (π–5π) controls the spread and density
-
-## 📁 File Structure
-
-```
-Twist-1-Generative-Geometric-Art/
-├── index.html          # Main application (all-in-one)
-├── Twist-1.jpg         # T-shirt mockup image
-├── fav.svg             # Favicon
-├── demo-screenshot.jpg # Website demo screenshot
-├── README.md           # This file
-└── LICENSE             # MIT License
-```
-
-## 🛠️ Tech Stack
-
-- **Vanilla HTML/CSS/JS** — No dependencies
-- **Canvas API** — 2D rendering
-- **CSS Grid & Flexbox** — Responsive layout
-- **GitHub Pages** — Hosting
-
-## 🎯 Interactive Controls
-
-| Action | Keyboard | Button |
-|--------|----------|--------|
-| Regenerate | `R` | Click "regenerate" |
-| Save Image | `S` | Click "regenerate" |
-| Toggle Apparel | `T` | Click "apparel" |
-
-## 🔧 Customization
-
-You can tweak the generation parameters in `index.html`:
-
-- **Circle count range**: Modify `circlenum` calculation (line ~175)
-- **Twist range**: Adjust `B` min/max (line ~176)
-- **Background colors**: Edit `backgroundColours` array (line ~90)
-- **Foreground colors**: Edit `foregroundColours` array (line ~91)
-
-## 📱 Responsive Design
-
-The application automatically adapts to:
-- Desktop screens
-- Tablets
-- Mobile phones
-- Landscape orientation
-- Various aspect ratios
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Designed as generative art for apparel
-- Inspired by parametric design and computational creativity
-- Special thanks to the generative art community
+> A seed-based generative system for glowing-circle compositions.  
+> A reproducible catalogue of computational vibration studies.
 
 ---
 
-**Built with ❤️ and randomness**
+## What is this?
+
+**Twist 1** is a generative design system built on accumulation. One hundred to five hundred glowing rings are placed along a mathematical twist — each at its own angle, each with its own radius, each tinted from the RGB spectrum. The rings overlap; the colours blur; the field becomes a soft **vibration** rather than a drawing.
+
+Every artwork in this catalogue is defined by a single numeric seed. The same seed always produces the identical composition — making each piece **traceable, reproducible, and licensable** across textile, print, and apparel applications.
+
+Named for the helical drift that emerges from positioning circles along a sine–cosine arc, **Twist 1** reframes accumulation as a textile.
+
+---
+
+## Live
+
+🌐 **[View the catalogue →](https://reyrove.github.io/Twist-1/)**
+
+---
+
+## The System
+
+The generator is a single-layer system — a field of glowing rings whose positions, sizes, colours, and strokes are all seeded:
+
+| Layer | Description |
+|-------|-------------|
+| **Ground** | One of 12 pastel background tones, chosen per seed. |
+| **Rings** | 100 to 500 glowing circles positioned along a twist, each tinted from a low-range RGB noise function. |
+
+Both layers are driven by the same seed, ensuring deterministic output.
+
+### Parameters
+
+- **Circle count** — 100 to 500 (stepped in tens)
+- **Twist range** — π to 5π, seeding the arc and the shadow blur
+- **Circle position** — along a sine/cosine arc, one-third of the canvas from centre
+- **Circle radius** — proportional to the twist angle
+- **Stroke weight** — `w / (30B)` to `w / (20B)`, seeded
+- **Background** — drawn from 12 curated pastel tones
+
+---
+
+## Structure
+
+```
+Twist-1/
+├── index.html              ← Full catalogue (single-file)
+├── images/
+│   ├── fav.svg
+│   ├── twist-tote.png
+│   ├── twist-cushion.png
+│   └── ...
+├── Twist-1.jpg             ← Apparel mockup
+└── README.md
+```
+
+The entire project is contained in a single `index.html` — no build step, no dependencies, no framework. Open it in any modern browser.
+
+---
+
+## Features
+
+- **Seed-based generation** — every composition is deterministic and reproducible
+- **Live catalogue** — cover, statement, plate, surfaces, process, archive, commission sections
+- **Multiple surfaces** — print, scarf, textile, wallpaper — all rendered from the same seed
+- **Archive of 8 seeds** — click any plate to load it into the main view
+- **PNG export** — download any composition directly from the browser
+- **Keyboard shortcuts** — `R` for new seed, `S` to save
+- **Legal modal** — licensing, terms, and credits built in
+- **Responsive** — works on desktop, tablet, and mobile
+- **Mobile-first navbar** — horizontally scrollable with fade hint
+
+---
+
+## Usage
+
+### Generate a new composition
+
+Click **New Seed** or press `R`.
+
+### Download the current composition
+
+Click **Download** or press `S`.
+
+### Load a seed from the archive
+
+Click any plate in the **Archive** section.
+
+---
+
+## Color System
+
+Every composition is drawn from two curated palettes:
+
+- **Background** — one of 12 pastel tones:
+
+  | Hex | Name |
+  |-----|------|
+  | `#FFC0CB` | Pink |
+  | `#FFA07A` | Light Salmon |
+  | `#FFFFE0` | Light Yellow |
+  | `#E6E6FA` | Lavender |
+  | `#ADFF2F` | Green Yellow |
+  | `#66CDAA` | Medium Aquamarine |
+  | `#E0FFFF` | Light Cyan |
+  | `#FFE4C4` | Bisque |
+  | `#F5F5DC` | Beige |
+  | `#DCDCDC` | Gainsboro |
+  | `#FFF0F5` | Lavender Blush |
+  | `#FFF8DC` | Cornsilk |
+
+- **Circles** — each drawn from a low-range RGB noise function with a cool-green bias (`r: 0–192`, `g: 0–252`, `b: 0–208`), which keeps the field in a soft, saturated range rather than pure white or black.
+
+Because both the twist and the RGB noise are seeded, no two compositions share the same rhythm of glow and hue.
+
+---
+
+## Technical Notes
+
+- Pure vanilla JavaScript — no libraries
+- Canvas 2D rendering
+- Custom xorshift random generator for deterministic seeds
+- Device-pixel-ratio aware rendering
+- Fully static rendering — one seed produces one composition, no animation loops
+- Single `renderStatic()` function drives the cover, plate, framed print, all four surfaces, and all eight archive thumbnails
+- Glow via `shadowColor` + `shadowBlur` per circle stroke
+- `prefers-reduced-motion` respected
+
+---
+
+## About
+
+**Twist 1** is a project by [Reyhaneh Daneshdoost](https://reyrove.github.io/) — an Iranian-born artist working at the intersection of classical textile logic and generative systems.
+
+The work begins with a simple observation: the woven surface — repetitive, mathematically structured, infinitely variable — has always been a form of computation, long before computers.
+
+**Twist 1** is an attempt to render that logic visible.
+
+> *A circle drawn from a distance becomes a vibration — and every vibration leaves a trace.*
+
+---
+
+## Licensing
+
+All compositions are seed-documented and available for licensing across textile, surface, and apparel applications.
+
+For commercial use, custom editions, or exclusive rights:
+
+📧 **reyhanehdaneshdoost@gmail.com**
+
+See the **Licensing** section in the live catalogue for details.
+
+---
+
+## Links
+
+- 🌐 [Website](https://reyrove.github.io/)
+- 📷 [Instagram](https://www.instagram.com/rey._.rove/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/reyhaneh-daneshdoost-730481160/)
+- 🐦 [X](https://x.com/reyrove)
+
+---
+
+## Credits
+
+**Design & Generative System**  
+Reyhaneh Daneshdoost
+
+**Typefaces**  
+Cormorant Garamond · DM Mono
+
+**Edition**  
+Twist 1 — Autumn 2026
+
+---
+
+<p align="center">
+  <em>Generative Glowing Circles</em><br />
+  <sub>© Reyrove Studio · All compositions reproducible by seed</sub>
+</p>
